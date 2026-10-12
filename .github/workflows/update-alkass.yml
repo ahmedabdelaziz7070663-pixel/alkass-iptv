@@ -1,19 +1,12 @@
 name: 🔄 تحديث قنوات الكاس تلقائياً
 
 on:
-  # كل ساعة
   schedule:
     - cron: '0 * * * *'
-  # تشغيل يدوي
   workflow_dispatch:
-  # عند أي تعديل على السكربت
   push:
     branches: [main]
-    paths:
-      - 'alkass.py'
-      - '.github/workflows/update-alkass.yml'
 
-# صلاحيات الكتابة للمستودع
 permissions:
   contents: write
 
@@ -23,42 +16,37 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      # 1️⃣ جلب الكود
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ تثبيت Python
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # 3️⃣ تثبيت المكتبات
       - name: 📦 Install dependencies
         run: pip install requests
 
-      # 4️⃣ تشغيل السكربت
-      - name: 🎬 Generate M3U playlist
+      - name: 🎬 Generate M3U playlists
         run: python alkass.py
 
-      # 5️⃣ عرض الملف للتأكد
-      - name: 👁️ Show generated file
+      - name: 📋 Show generated files
         run: |
-          echo "=== محتوى الملف ==="
-          head -30 alkass.m3u
-          echo "=== عدد الأسطر ==="
-          wc -l alkass.m3u
+          echo "=== الملفات المُنشأة ==="
+          ls -lh channels/
+          echo ""
+          echo "=== عدد الملفات ==="
+          ls channels/*.m3u | wc -l
 
-      # 6️⃣ رفع الملف للمستودع
       - name: 🚀 Commit and Push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add alkass.m3u
+          git add channels/
           if git diff --staged --quiet; then
             echo "✅ لا توجد تغييرات"
           else
-            git commit -m "🔄 تحديث قنوات الكاس - $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git commit -m "🔄 تحديث ملفات القنوات - $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
             echo "✅ تم رفع التحديثات"
           fi
