@@ -1,0 +1,13 @@
+#EXTM3U
+# تحديث تلقائي: 2026-10-12 08:26:09 UTC
+
+#EXTINF:-1 tvg-id="alkass-1" tvg-name="Alkass 1" tvg-logo="https://www.alkass.net/images/new-1.png" group-title="🇶🇦 قنوات الكاس القطرية",Alkass 1
+https://liveeu-gcps.alkassdigital.net/alkass1-p/main.m3u8?hdnts=exp=1791794469~hmac=6c73a92b5f851c042a9cbbca9083b1d2c7a9c6040b71c182a7dca3b3324e6247
+#EXTINF:-1 tvg-id="alkass-2" tvg-name="Alkass 2" tvg-logo="https://www.alkass.net/images/new-2.png" group-title="🇶🇦 قنوات الكاس القطرية",Alkass 2
+https://liveeu-gcps.alkassdigital.net/alkass2-p/main.m3u8?hdnts=exp=1791794469~hmac=0ff7c52a123b0d4abe5c94688f4c10e464f5cf915dfac716ddafbf1eac67508a
+#EXTINF:-1 tvg-id="alkass-3" tvg-name="Alkass 3" tvg-logo="https://www.alkass.net/images/new-3.png" group-title="🇶🇦 قنوات الكاس القطرية",Alkass 3
+https://liveeu-gcps.alkassdigital.net/alkass3-p/main.m3u8?hdnts=exp=1791794469~hmac=bb3e126e1a1ef90cc153c25e91e8f37f71ddd19ac8296e3289d67a56684cbeee
+#EXTINF:-1 tvg-id="alkass-4" tvg-name="Alkass 4" tvg-logo="https://www.alkass.net/images/new-4.png" group-title="🇶🇦 قنوات الكاس القطرية",Alkass 4
+https://liveeu-gcps.alkassdigital.net/alkass4-p/main.m3u8?hdnts=exp=1791794469~hmac=27d15a5f994b59d1ba2f873e1492fccf856634293dd760ed1fde5a45d159f93b
+#EXTINF:-1 tvg-id="alkass-14" tvg-name="shoof1" tvg-logo="https://www.alkass.net/images/shoof1.png" group-title="🇶🇦 قنوات الكاس القطرية",shoof1
+https://liveakgrns.alkassdigital.net/hls/live/2097037/shooflivevssaua/master.m3u8?hdnts=exp=1791794469~hmac=8eae40ce92fc95f6b13e9221004899a3f1bc74c73cec594fe6a2ce395c4beccd
